@@ -11,7 +11,7 @@ app "dmai0" {
     profile = "docker-01H8JNQF38TP6Z86SEKAV90D4A"
   }
   build {
-    use "null" {}
+    use "docker" {}
   }
   deploy {
     use "exec" {
