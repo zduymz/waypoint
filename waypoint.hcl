@@ -16,6 +16,8 @@ app "dmai0" {
     }
     registry {
       use "docker" {
+        image = "duym/nginx"
+        tag   = "latest"
         local = true
       }
     }
