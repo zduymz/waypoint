@@ -15,7 +15,7 @@ app "dmai0" {
   }
   deploy {
     use "exec" {
-      command = ["sleep", "1800"]
+      command = ["echo", "1800"]
     }
   }
 
