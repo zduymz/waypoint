@@ -12,6 +12,7 @@ app "dmai0" {
   }
   build {
     use "docker" {
+      disable_entrypoint = true
     }
     registry {
       use "docker" {
