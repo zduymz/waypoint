@@ -19,6 +19,7 @@ app "dmai0" {
       use "docker" {
         image = "nginx"
         tag   = "latest"
+        local = true
       }
     }
 
