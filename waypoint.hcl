@@ -12,8 +12,8 @@ app "dmai0" {
   }
   build {
     use "docker-pull" {
-      image = nginx
-      tag   = latest
+      image = "nginx"
+      tag   = "latest"
     }
   }
   deploy {
