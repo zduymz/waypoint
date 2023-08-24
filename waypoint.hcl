@@ -15,6 +15,13 @@ app "dmai0" {
       image = "nginx"
       tag   = "latest"
     }
+    registry {
+      use "docker" {
+        image = "nginx"
+        tag   = "latest"
+      }
+    }
+
   }
   deploy {
     use "exec" {
