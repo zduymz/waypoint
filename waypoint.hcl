@@ -16,8 +16,6 @@ app "dmai0" {
     }
     registry {
       use "docker" {
-        image = "nginx"
-        tag   = "latest"
         local = true
       }
     }
