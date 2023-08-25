@@ -30,7 +30,17 @@ app "dmai0" {
       command = ["echo", "1800"]
     }
   }
+}
 
+app "dmai1" {
+  build {
+    use "null" {}
+  }
+  deploy {
+    use "exec" {
+      command = ["echo", "1800"]
+    }
+  }
 }
 
 variable "registry_username" {
