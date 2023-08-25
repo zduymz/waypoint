@@ -22,6 +22,7 @@ app "dmai0" {
         password = var.registry_password
         auth {
           hostname = "https://index.docker.io/v1/"
+          serverAddress = "https://index.docker.io/v1/"
           username = var.registry_username
           password = var.registry_password
         }
