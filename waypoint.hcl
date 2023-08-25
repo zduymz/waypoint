@@ -33,9 +33,6 @@ app "dmai0" {
 }
 
 app "dmai1" {
-  runner {
-    profile = "docker-01H8JNQF38TP6Z86SEKAV90D4A"
-  }
   build {
     use "null" {}
   }
