@@ -11,14 +11,18 @@ app "dmai0" {
     profile = "docker-01H8JNQF38TP6Z86SEKAV90D4A"
   }
   build {
-    use "docker" {
+    use "docker-pull" {
+      image              = "nginx"
+      tag                = "latest"
       disable_entrypoint = true
     }
     registry {
       use "docker" {
-        image = "duym/nginx"
-        tag   = "latest"
-        local = true
+        image    = "duym/nginx"
+        tag      = "000"
+        username = var.registry_username
+        password = var.registry_password
+        local    = true
       }
     }
 
@@ -29,4 +33,18 @@ app "dmai0" {
     }
   }
 
+}
+
+variable "registry_username" {
+  type      = string
+  default   = ""
+  env       = ["REGISTRY_USERNAME"]
+  sensitive = true
+}
+
+variable "registry_password" {
+  type      = string
+  default   = ""
+  env       = ["REGISTRY_PASSWORD"]
+  sensitive = true
 }
