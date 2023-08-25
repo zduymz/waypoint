@@ -7,9 +7,6 @@ runner {
 }
 
 app "dmai0" {
-  runner {
-    profile = "docker-01H8JNQF38TP6Z86SEKAV90D4A"
-  }
   build {
     use "docker-pull" {
       image              = "nginx"
@@ -22,6 +19,7 @@ app "dmai0" {
         tag      = "000"
         username = var.registry_username
         password = var.registry_password
+        local = true
       }
     }
 
