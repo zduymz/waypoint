@@ -22,7 +22,6 @@ app "dmai0" {
         tag      = "000"
         username = var.registry_username
         password = var.registry_password
-        #local    = true
       }
     }
 
