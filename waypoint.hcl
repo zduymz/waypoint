@@ -17,7 +17,12 @@ app "dmai0" {
       disable_entrypoint = true
     }
     registry {
-      use "null" {
+      use "docker" {
+        image    = "duym/nginx-test"
+        tag      = "000"
+        username = var.registry_username
+        password = var.registry_password
+        #local    = true
       }
     }
 
