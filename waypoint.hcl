@@ -4,6 +4,7 @@ runner {
   data_source "git" {
     url = "https://github.com/zduymz/waypoint.git"
   }
+  profile = "docker-01H8JNQF38TP6Z86SEKAV90D4A"
 }
 
 app "dmai0" {
