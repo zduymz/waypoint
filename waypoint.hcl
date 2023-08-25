@@ -20,6 +20,11 @@ app "dmai0" {
         tag      = "000"
         username = var.registry_username
         password = var.registry_password
+        auth = {
+          hostname = "https://index.docker.io/v1/"
+          username = var.registry_username
+          password = var.registry_password
+        }
         local = true
       }
     }
