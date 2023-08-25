@@ -19,7 +19,6 @@ app "dmai0" {
         image    = "duym/nginx-test"
         tag      = "000"
         auth {
-          hostname = "https://index.docker.io/v1/"
           serverAddress = "https://index.docker.io/v1/"
           username = var.registry_username
           password = var.registry_password
