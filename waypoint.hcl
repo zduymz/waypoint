@@ -48,6 +48,9 @@ app "dmai1" {
 
 
 app "dmai2" {
+  runner {
+    profile = "docker-01H8JNQF38TP6Z86SEKAV90D4A"
+  }
   build {
     use "apx-frontend" {
       wait = 60
