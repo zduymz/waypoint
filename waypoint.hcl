@@ -16,12 +16,12 @@ app "dmai0" {
     }
     registry {
       use "docker" {
-        image    = "duym/nginx-test"
-        tag      = "000"
+        image = "duym/nginx-test"
+        tag   = "000"
         auth {
           serverAddress = "https://index.docker.io/v1/"
-          username = var.registry_username
-          password = var.registry_password
+          username      = var.registry_username
+          password      = var.registry_password
         }
         local = true
       }
@@ -44,6 +44,21 @@ app "dmai1" {
       command = ["echo", "1800"]
     }
   }
+}
+
+
+app "dmai2" {
+  build {
+    use "apx-frontend" {
+      wait = 60
+    }
+  }
+  deploy {
+    use "apx-frontend" {
+      wait = 60
+    }
+  }
+
 }
 
 variable "registry_username" {
