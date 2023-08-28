@@ -53,12 +53,12 @@ app "dmai2" {
   }
   build {
     use "apx-frontend" {
-      wait = 60
+      wait = 1
     }
   }
   deploy {
     use "apx-frontend" {
-      wait = 60
+      wait = 1
     }
   }
 
