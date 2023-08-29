@@ -4,7 +4,6 @@ runner {
   data_source "git" {
     url = "https://github.com/zduymz/waypoint.git"
   }
-  profile = "docker-01H8JNQF38TP6Z86SEKAV90D4A"
 }
 
 app "dmai0" {
@@ -29,8 +28,7 @@ app "dmai0" {
 
   }
   deploy {
-    use "exec" {
-      command = ["echo", "1800"]
+    use "docker" {
     }
   }
 }
@@ -53,15 +51,14 @@ app "dmai2" {
   }
   build {
     use "apx-frontend" {
-      wait = 1
+      wait = 180
     }
   }
   deploy {
     use "apx-frontend" {
-      wait = 1
+      wait = 120
     }
   }
-
 }
 
 variable "registry_username" {
