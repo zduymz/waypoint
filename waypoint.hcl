@@ -61,6 +61,24 @@ app "dmai2" {
   }
 }
 
+app "dmai3" {
+  runner {
+    profile = "docker-01H8JNQF38TP6Z86SEKAV90D4A"
+  }
+  build {
+    use "apx-ecr-scan" {
+      severity        = "high"
+      severity_detail = false
+      repository      = "088921318242.dkr.ecr.us-west-2.amazonaws.com/base"
+      tag             = "python39"
+    }
+  }
+  deploy {
+    use "apx-frontend" {
+      wait = 1
+    }
+  }
+}
 variable "registry_username" {
   type      = string
   default   = ""
